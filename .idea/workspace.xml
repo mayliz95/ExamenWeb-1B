@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e748c3df-fcfe-46be-b002-cca6022d97f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/Comida/comida.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/Ingredientes/ingredientes.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/autorizacion.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/exceptions/peticion-invalida.exception.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/general.pipe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/Comida/comida.class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Comida/comida.class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/Comida/comida.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Comida/comida.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/Comida/comida.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/Comida/comida.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/autorizacion.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/autorizacion.controller.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,16 +59,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autorizacion.controller.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="autorizacion.controller.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="316">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -144,8 +133,8 @@
         <option value="$PROJECT_DIR$/project/src/Comida/comida.schema.ts" />
         <option value="$PROJECT_DIR$/project/src/Comida/comida.service.ts" />
         <option value="$PROJECT_DIR$/project/src/Comida/comida.class.ts" />
-        <option value="$PROJECT_DIR$/project/src/autorizacion.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/app.module.ts" />
+        <option value="$PROJECT_DIR$/project/src/autorizacion.controller.ts" />
       </list>
     </option>
   </component>
@@ -259,26 +248,26 @@
       <workItem from="1527787783004" duration="255000" />
       <workItem from="1527823551267" duration="599000" />
       <workItem from="1527863230191" duration="1941000" />
-      <workItem from="1527866101802" duration="4515000" />
+      <workItem from="1527866101802" duration="8276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15920000" />
+    <option name="totallyTimeSpent" value="19681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.038011696" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.12865497" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -483,6 +465,13 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/autorizacion.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
         </state>
       </provider>
     </entry>
