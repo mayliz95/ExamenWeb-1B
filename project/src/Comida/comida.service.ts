@@ -4,7 +4,7 @@ import {ComidaClass} from "./comida.class";
 @Injectable()
 export class ComidaService {
 
-    arregloComidas: ComidaClass[] = [new ComidaClass('Salchi', 'Papas y salchica', 'Ecuador', 2,true)];
+    arregloComidas: ComidaClass[] = [new ComidaClass(1,'Salchi', 'Papas y salchica', 'Ecuador', 2,true)];
 
     agregarComida(comida: ComidaClass): ComidaClass[] {
         this.arregloComidas.push(comida);

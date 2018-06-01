@@ -1,6 +1,8 @@
 import {Body, Controller, Get, Param, Post, Put, Req, Res} from "@nestjs/common";
 import {ComidaService} from "./comida.service";
-import {ComidaClass} from "./comida.class";
+//import {ComidaClass} from "./comida.class";
+import {COMIDA_SCHEMA} from "./comida.schema";
+import {GeneralPipe} from "../general.pipe";
 
 @Controller('Comida')
 export class ComidaController {
@@ -18,10 +20,12 @@ export class ComidaController {
 
     @Post()
     crearComida(
-        @Body() bodyParams
-    ) {
-        const comida = new ComidaClass(bodyParams.nombrePlato, bodyParams.descripcionPlato, bodyParams.nacionalidad, bodyParams.numeroPersonas, bodyParams.picante);
+        @Body(//) bodyParams
+            new GeneralPipe(COMIDA_SCHEMA)) comidaArgumento
 
+    ) {
+        //const comida = new ComidaClass(bodyParams.nombrePlato, bodyParams.descripcionPlato, bodyParams.nacionalidad, bodyParams.numeroPersonas, bodyParams.picante);
+        const comida = comidaArgumento;
         return this._comidaService.agregarComida(comida);
     }
 
