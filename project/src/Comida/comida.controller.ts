@@ -1,8 +1,9 @@
 import {Body, Controller, Get, Param, Post, Put, Req, Res} from "@nestjs/common";
 import {ComidaService} from "./comida.service";
-//import {ComidaClass} from "./comida.class";
 import {COMIDA_SCHEMA} from "./comida.schema";
 import {GeneralPipe} from "../general.pipe";
+import {ComidaClass} from "./comida.class";
+import {NoEncontradoException} from "../exceptions/noEncontrado.exception";
 
 @Controller('Comida')
 export class ComidaController {
@@ -20,31 +21,44 @@ export class ComidaController {
 
     @Post()
     crearComida(
-        @Body(//) bodyParams
-            new GeneralPipe(COMIDA_SCHEMA)) comidaArgumento
-
-    ) {
-        //const comida = new ComidaClass(bodyParams.nombrePlato, bodyParams.descripcionPlato, bodyParams.nacionalidad, bodyParams.numeroPersonas, bodyParams.picante);
+        @Body(new GeneralPipe(COMIDA_SCHEMA)) comidaArgumento
+    ): ComidaClass[] {
         const comida = comidaArgumento;
         return this._comidaService.agregarComida(comida);
     }
 
-    /*@Get('/:id') //uso nombrePlato en lugar de id
-    obtenerUnoo(
-        @Param() paramParams
-    ) {
-        return this._comidaService.mostrarUnoPorNombre(paramParams.nombrePlatoABuscar);
-    }*/
-
-    @Get('/:nombrePlatoABuscar') //uso nombrePlato en lugar de id
+    @Get('/:id')
     obtenerUno(
-        @Param() paramParams
+        @Param() paramParams,
+        @Res() response
     ) {
-        return this._comidaService.mostrarUnoPorNombre(paramParams.nombrePlatoABuscar);
+        const comidaPorId = this._comidaService.mostrarUnoPorId(paramParams.id);
+
+        if (comidaPorId === undefined) {
+            throw new NoEncontradoException(
+                'No se encontro ningun elemento con ese id',
+                'error',
+                4
+            )
+        } else {
+            return response.send(comidaPorId);
+        }
     }
 
     @Put('/:id')
-    editarUno() {
-        return 'Editar uno';
+    editarUno(
+        @Param() paramParams,
+        @Body(new GeneralPipe(COMIDA_SCHEMA)) comidaArgumento,
+        @Res() response
+    ) {
+        if (this._comidaService.mostrarUnoPorId(paramParams.id) !== undefined) {
+            return response.send(this._comidaService.editarUnoPorId(paramParams.id, comidaArgumento));
+        } else {
+            throw new NoEncontradoException(
+                'No se encontro ningun elemento para editar con ese id',
+                'error',
+                4
+            )
+        }
     }
 }

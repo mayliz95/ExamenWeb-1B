@@ -3,6 +3,10 @@ import * as Joi from 'joi';
 export const INGREDIENTES_SCHEMA = Joi
     .object()
     .keys({
+        id: Joi
+            .number()
+            .integer()
+            .required(),
         nombreIngrediente: Joi
             .string()
             .required()
@@ -11,7 +15,6 @@ export const INGREDIENTES_SCHEMA = Joi
             .max(30),
         cantidad: Joi
             .number()
-            .integer()
             .required(),
         descripcionPreparacion: Joi
             .string()
@@ -25,7 +28,7 @@ export const INGREDIENTES_SCHEMA = Joi
         tipoIngrediente: Joi
             .string()
             .required()
-            .regex(/^[a-zA-Z]$/)
+            .regex(/^[a-zA-Z ]{3,30}$/)
             .min(3)
             .max(30),
         necesitaRefrigeracion: Joi

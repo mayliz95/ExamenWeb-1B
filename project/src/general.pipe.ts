@@ -25,6 +25,5 @@ export class GeneralPipe implements PipeTransform {
             );
         }
         return valorEnBrutoDelRequest;
-
     }
 }

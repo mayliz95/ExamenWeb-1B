@@ -1,5 +1,7 @@
 import { Injectable} from "@nestjs/common";
 import {ComidaClass} from "./comida.class";
+import {identity} from "rxjs/index";
+import {puts} from "util";
 
 @Injectable()
 export class ComidaService {
@@ -15,9 +17,17 @@ export class ComidaService {
         return this.arregloComidas;
     }
 
-    mostrarUnoPorNombre(nombrPlatoABuscar: string): ComidaClass {
-        var comidaId: ComidaClass = this.arregloComidas.find(comida => comida.nombrePlato === nombrPlatoABuscar);
+    mostrarUnoPorId(idABuscar: number): ComidaClass {
+        var comidaId: ComidaClass = this.arregloComidas.find(comida => comida.id == idABuscar);
         return comidaId;
     }
 
+    editarUnoPorId(idABuscar: number, comida: ComidaClass ): ComidaClass [] {
+        var comidaId: ComidaClass = this.arregloComidas.find(comida => comida.id == idABuscar);
+        if (comidaId !== undefined) {
+            var idArreglo = this.arregloComidas.indexOf(comidaId);
+            puts(this.arregloComidas[idArreglo] = comida);
+        }
+        return this.arregloComidas;
+    }
 }

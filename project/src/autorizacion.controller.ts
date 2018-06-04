@@ -9,11 +9,15 @@ export class AutorizacionController {
         @Req() request,
         @Res() response
     ) {
-        //response.cookie('token', 'adrianeguez');
         if (bodyParams.usuario === 'adrianeguez' && bodyParams.password === '12345678910') {
-
+            response.cookie('token', 'adrianeguez');
             return response.send({
                 mensaje: 'OK'
+            })
+        }
+        else {
+            return response.send({
+                mensaje: 'Los Datos no coinciden, no puede iniciar sesión'
             })
         }
     }
@@ -27,13 +31,22 @@ export class AutorizacionController {
         return response.send();
     }
 
+    @Get('modificarCookie')
+    modificarCookie(
+        @Res() response,
+        @Req() request,
+    ) {
+        response.cookie('token', undefined);
+        return response.send();
+    }
+
     @Post('cerrarSesion')
     cerrarSesion(
         @Body() bodyParams,
         @Req() request,
         @Res() response
     ) {
-        //response.cookie('token', 'adrianeguez');
+        response.cookie('token', undefined);
         return response.send({
             mensaje: 'Usted salio del sistema'
         })
